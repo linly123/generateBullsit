@@ -1,0 +1,47 @@
+<form method='POST' action='/'>
+  <div>
+    <h1 style='text-align: center; margin: 40px auto'>你想對誰說幹說<br><span
+        style='color: red'>{{#if errorMsg}}*請選擇以下其中一個人{{/if}}</span></h1>
+    <div style='display:flex; justify-content:center'>
+      <div class="card-group" style='width: 1000px; text-align:center; '>
+        <div class="card">
+          <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg"
+            class="card-img-top" alt="..." style='height:300px; wight:350px'>
+          <div class="card-body">
+            <input type="radio" class='form-check-input' id="engineer" name="target" value="engineer"
+              {{#if engineer}}checked{{/if}}>
+            <label for="engineer">
+              <h5>工程師</h5>
+            </label><br>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg"
+            class="card-img-top" alt="..." style='height:300px; wight:350px'>
+          <div class="card-body">
+            <input type="radio" class='form-check-input' id="designer" name="target" value="designer"
+              {{#if designer}}checked{{/if}}>
+            <label for="designer">
+              <h5>設計師</h5>
+            </label>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg"
+            class="card-img-top" alt="..." style='height:300px; wight:350px'>
+          <div class="card-body">
+            <input type="radio" class='form-check-input' id="entrepreneur" name="target" value="entrepreneur"
+              {{#if entrepreneur}}checked{{/if}}>
+            <label for="entrepreneur">
+              <h5>創業師</h5>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style='display: flex; justify-content:center; margin: 50px auto; height:50px'> <button type="submit"
+        class="btn btn-primary" style='background-color:coral'>產生幹話</button>
+      <textarea id="result" name="result" rows="4" cols="50">{{boxMsg}}</textarea>
+    </div>
+  </div>
+</form>
